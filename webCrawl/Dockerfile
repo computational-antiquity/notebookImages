@@ -2,6 +2,13 @@ FROM jupyter/base-notebook
 
 MAINTAINER Malte Vogl <mvogl@mpiwg-berlin.mpg.de>
 
+RUN conda install -y -c conda-forge jupyter_contrib_nbextensions
+
+# Enable table of contents
+RUN pip install jupyter_contrib_nbextensions
+
+RUN jupyter contrib nbextension install --user && jupyter nbextension enable toc2/main
+
 USER root
 
 RUN mkdir -p /srv
