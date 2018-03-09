@@ -4,9 +4,15 @@ MAINTAINER Malte Vogl <mvogl@mpiwg-berlin.mpg.de>
 
 USER root
 
-RUN mkdir -p /srv/packages
+RUN mkdir -p /srv
 
-COPY packages/requierements.txt /srv/packages/requierements.txt 
+COPY packages /srv/
+
+# Uncomment to add extra Linux packages as required.
+
+# RUN dpkg --set-selections < /srv/packages.txt
+
+# RUN apt-get -u dselect-upgrade
 
 RUN pip install -r /srv/packages/requierements.txt
 

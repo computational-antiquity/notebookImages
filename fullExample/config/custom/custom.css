@@ -1,0 +1,304 @@
+<link href='http://fonts.googleapis.com/css?family=Fenix' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700,800,900,100italic,300italic,400italic,500italic,700italic,800italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400' rel='stylesheet' type='text/css'>
+<style>
+    @font-face {
+        /*font-family: "Computer Modern";*/
+	font-family : 'PT', sans-serif;
+        src: url('http://mirrors.ctan.org/fonts/cm-unicode/fonts/otf/cmunss.otf');
+    }
+
+    #ipython_notebook img{
+        display:block;
+        background: url(notebook_logo.png) no-repeat;
+        width: 186px;
+        height: 55px;
+        padding-left: 233px;
+        margin-bottom: -1%;
+        border: 0px #4a4a48;
+        background-color: transparent;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+     }
+
+
+    .button {
+    background-color: #968c78;
+    border: none;
+    margin-top: -12px;
+    width: 300px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+
+
+    /* Header*/
+    div#header-container {  background-color:  #4a4a48; margin-top: 0%;  height:  40px; color: #4a4a48; border: 0px #000; font-size:0px;}
+    div#menubar-container { background-color:  #4a4a48; margin-top: 0%;  height: 75px; color: #ffffff; border: 0px #4a4a48; }
+    div#maintoolbar { background-color:  #4a4a48; margin-top: -0.37%; position: relative; height:  0px;  }
+    div.navbar-collapse {position: relative;  background-color:  #4a4a48; margin-top: 0%; border: 0px #4a4a48;  color: #ffffff; height:  20px; }
+    div.navbar-default {position: relative;  background-color:  #4a4a48; margin-top: 0%; border: 0px #4a4a48;  color: #ffffff; height:  20px; }
+
+    #kernel_logo_widget{display:none;}
+    #logout {display: none;}
+    .nav.navbar-nav li a {color: white ; background-color:  #4a4a48; /*text-shadow: 0 0 30px white;*/  font-size: 110%; font-family: 'PT', sans-serif;}
+    .dropdown-menu .divider {background-color: darkgray;  margin: 0px 0px;}
+
+    /*Main Body*/
+    div#notebook{background: linear-gradient(to right, #968c78 0%, #d6d1bd 100%); width: 100%;     }
+    .end_space
+    {
+    width: 500px;
+    height: 100px;
+    margin-left: 1%;
+    background: url('Logo_Edition_Topoi.png') left center no-repeat, url('Logo_MPIWG.png') right center no-repeat;
+
+    }
+    div#notebook-container { margin-top: -0.9% !important;  position: block; }
+    .container {width: 100% !important; margin-left: 0% !important;}
+    div#notebook_panel {margin: -5px; width: 100%; }
+
+    div.cell{
+        z-index: 1;
+        width:80%;
+        margin-left: 3% !important;
+        margin-right:auto;
+        background-color: transparent;
+       }
+    h1 {
+       font-family: 'PT', serif;
+       }
+
+    h2 {
+        font-family: 'PT', serif;
+    }
+    h3{
+	font-family: 'PT', serif;
+
+       }
+    h4{
+        /*font-family: 'PT',Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+	font-family: 'PT', serif;
+        color: black;
+       }
+    h5 {
+        font-family: 'PT', serif;
+    }
+
+    div.text_cell_render{
+        position: relative;
+	font-family: 'PT', serif;
+        /*font-family: 'Alegreya Sans',Computer Modern, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+        line-height: 135%;
+        font-size: 120%;
+        width:90%;
+        padding-left: 5%;
+        margin-top: auto;
+	margin-botton: auto;
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+    /* Input & Output cells*/
+    div.prompt.input_prompt {  font-size: 0px; color: gray;  position: absolute;  margin-right: 2%;  margin-left: 2.5%; }
+    div.prompt.output_prompt { font-size: 0px;   color: gray;  position: absolute; }
+
+
+    div.input_area {
+    position: relative;
+    width:85%;
+    background-color: #efefec;
+    font-size: 130%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left:10.2%;
+    }
+
+    div.output_area {
+    position: relative;
+    width:85%;
+    max-width: 120%;
+    background-color: transparent;
+    font-size: 100%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    margin-left:0.2%;
+    }
+    div output_area pre {
+    margin-left: 0.2%;
+    }
+
+    div.output_text {
+    margin-left: 10.2%;
+
+    }
+
+    div.output_subarea.output_html.rendered_html.output_result {
+    margin-left: 10.2%;
+    }
+
+    div.widget-subarea.jp-Output-result {
+    margin-left: 5.2%;
+    }
+
+    div.output_subarea.output_png {
+	margin-left: 5.2%
+    }
+
+    div.output.output_scroll {
+	width: 80%;
+	/*margin-left: 10.2%;*/
+    }
+
+    div.output
+    {
+    margin-left: 10.2%;
+    }
+
+
+
+    /*Properties of table of contents sidebar*/
+    div#toc {
+                  background-color: #efefec;
+                  position: fixed;
+                  overflow-x: hidden;
+                  top: 150px;
+                  width: 15%;
+                  right: 1%;
+		  height: 50% !important;
+                  margin-bottom: 10px !important;
+                  }
+
+    div#toc-wrapper
+	    {
+                  border: 0px #000;
+                  background-color: transparent;
+                  position: fixed;
+                  overflow-x: hidden;
+                  max-width:0px;
+                  width: 0px !important;
+		  right: 1%;
+                  height: 0%;
+                  top: 150px;
+                  }
+
+    div#toc-header
+	     {
+		  background-color: transparent;
+                  position: fixed;
+                  top: 120px;
+                  width: 15%;
+                  right: 1%;
+                  max-height: 5%;
+ 		  }
+
+    div.urth-toc {
+	display: none;
+	width: 0% !important;
+	height: 0% !important;
+    }
+
+    .ui-resizable-handle {height: 0px; }
+    table.dataframe tr {border: 1px #000;}
+    .CodeMirror{
+
+            font-family: "Source Code Pro";
+			font-size: 90%;
+    }
+
+    .text_cell_render h1 {
+        border-top: 1.5px solid #4a4a48;
+        font-weight: 200;
+        font-size: 22pt;
+	line-height: 150%;
+        color: #4a4a48;
+        margin-left: -5%;
+        margin-bottom: auto;
+        margin-top: auto;
+        display: block;
+    }
+    .text_cell_render h2 {
+        font-weight: 150;
+        font-size: 14pt;
+		line-height: 100%;
+        color: #4a4a48;
+        margin-left: -5%;
+        margin-bottom: auto;
+        margin-top: auto;
+        display: block;
+    }
+
+ .text_cell_render h3 {
+        font-weight: 150;
+        font-size: 12pt;
+	line-height: 100%;
+        color: #4a4a48;
+        margin-left: -5%;
+        margin-bottom: auto;
+        margin-top: auto;
+        display: block;
+    }
+
+   .text_cell_render h4 {
+        font-weight: 10;
+        font-size: 12pt;
+        color:  #4a4a48;
+		line-height: 100%;
+        margin-left: -5%;
+        margin-bottom: 0em;
+        margin-top: 0.5em;
+        display: block;
+    }
+
+     .text_cell_render h5 {
+        font-weight: 15;
+        font-size: 12pt;
+        color:  #4a4a48;
+		line-height: 110%;
+        margin-left: 4.0%;
+        margin-bottom: 0em;
+        margin-top: 0.5em;
+        display: block;
+        }
+
+    .text_cell_render h6 {
+        font-weight: 200;
+        font-size: 45pt;
+		line-height: 100%;
+        color: black;
+        margin-left: 0%;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        display: block;
+    }
+
+
+
+    .warning{
+        color: rgb( 240, 20, 20 )
+        }
+</style>
+
+<script>
+    MathJax.Hub.Config({
+                        TeX: {
+                           extensions: ["AMSmath.js"]
+                           },
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                },
+                displayAlign: 'center', // Change this to 'center' to center equations.
+                "HTML-CSS": {
+                    styles: {'.MathJax_Display': {"margin": 4}}
+                }
+        });
+</script>
