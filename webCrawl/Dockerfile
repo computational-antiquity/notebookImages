@@ -19,7 +19,7 @@ COPY packages /srv/
 
 # RUN apt-get -u dselect-upgrade
 
-RUN pip install -r /srv/packages/requierements.txt
+RUN pip install -r /srv/packages/requirements.txt
 
 COPY config/jupyter_notebook_config.py /home/jovyan/.jupyter
 
