@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/base-notebook
 
 MAINTAINER Malte Vogl <mvogl@mpiwg-berlin.mpg.de>
 
