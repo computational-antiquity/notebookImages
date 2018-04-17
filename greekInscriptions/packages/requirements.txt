@@ -1,4 +1,7 @@
 pandas
+numpy
+matplotlib
 ipywidgets
 citableclass
 nltk
+folium

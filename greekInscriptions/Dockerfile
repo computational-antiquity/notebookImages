@@ -21,21 +21,11 @@ COPY packages /srv/packages
 
 RUN pip install -r /srv/packages/requirements.txt
 
-# For python packages without a release on pypi
-RUN apt update
-RUN apt install -y git
-RUN pip install git+https://github.com/paudan/treetagger-python.git
-
 COPY config/jupyter_notebook_config.py /home/jovyan/.jupyter
 
 COPY data /home/jovyan/data
 
 RUN chown -R jovyan /home/jovyan
-
-# Extra routines to install treetagger
-RUN cd /home/jovyan/data/treetagger && sh install-tagger.sh
-
-RUN export TREETAGGER_HOME='/home/jovyan/data/treetagger/cmd/'
 
 USER jovyan
 
