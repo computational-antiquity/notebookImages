@@ -32,11 +32,11 @@ COPY data /home/jovyan/data
 
 RUN chown -R jovyan /home/jovyan
 
-USER jovyan
-
 # Extra routines to install treetagger
 RUN cd /home/jovyan/data/treetagger && ./install-tagger.sh
 
 RUN export TREETAGGER_HOME='/home/jovyan/data/cmd/tree-tagger-german'
+
+USER jovyan
 
 RUN jupyter trust /home/jovyan/data/index.ipynb
