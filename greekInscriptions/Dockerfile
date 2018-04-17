@@ -35,7 +35,7 @@ RUN chown -R jovyan /home/jovyan
 # Extra routines to install treetagger
 RUN cd /home/jovyan/data/treetagger && sh install-tagger.sh
 
-RUN export TREETAGGER_HOME='/home/jovyan/data/cmd/tree-tagger-german'
+RUN export TREETAGGER_HOME='/home/jovyan/data/treetagger/cmd/'
 
 USER jovyan
 
