@@ -2,10 +2,12 @@ FROM jupyter/base-notebook
 
 MAINTAINER Malte Vogl <mvogl@mpiwg-berlin.mpg.de>
 
-# Enable table of contents
-RUN pip install jupyter_contrib_nbextensions
+# Enable table of contents and widgets
+RUN pip install jupyter_contrib_nbextensions ipywidgets
 
 RUN jupyter contrib nbextension install --user && jupyter nbextension enable toc2/main
+
+RUN jupyter nbextension enable --py widgetsnbextension
 
 USER root
 
