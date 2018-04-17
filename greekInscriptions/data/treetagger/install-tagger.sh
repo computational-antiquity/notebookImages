@@ -24,26 +24,26 @@ then
     echo 'TreeTagger version for ARM-Linux installed.'
 fi
 
-if [ -r tagger-scripts.tar.gz ] 
-then
-    gzip -cd tagger-scripts.tar.gz | tar -xf -
-    chmod +x cmd/*
-    echo 'Tagging scripts installed.'
-fi
+#if [ -r tagger-scripts.tar.gz ]
+#then
+#    gzip -cd tagger-scripts.tar.gz | tar -xf -
+#    chmod +x cmd/*
+#    echo 'Tagging scripts installed.'
+#fi
 
-if [ -r estonian-par-linux-3.2-utf8.bin.gz ] 
+if [ -r estonian-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd estonian-par-linux-3.2-utf8.bin.gz > lib/estonian-utf8.par
     echo 'Estonian parameter file (UTF8) installed.'
 fi
 
-if [ -r finnish-par-linux-3.2-utf8.bin.gz ] 
+if [ -r finnish-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd finnish-par-linux-3.2-utf8.bin.gz > lib/finnish-utf8.par
     echo 'Finnish parameter file (UTF8) installed.'
 fi
 
-if [ -r greek-par-linux-3.2-utf8.bin.gz ] 
+if [ -r greek-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd greek-par-linux-3.2-utf8.bin.gz > lib/greek-utf8.par
     echo 'Greek parameter file (UTF8) installed.'
@@ -67,7 +67,7 @@ then
     echo 'Middle High German parameter file (UTF8) installed.'
 fi
 
-if [ -r german-chunker-par-linux-3.2-utf8.bin.gz ] 
+if [ -r german-chunker-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd german-chunker-par-linux-3.2-utf8.bin.gz > lib/german-chunker-utf8.par
     echo 'German chunker parameter file (UTF8) installed.'
@@ -79,13 +79,13 @@ then
     echo 'English parameter file (UTF8) installed.'
 fi
 
-if [ -r english-chunker-par-linux-3.2-utf8.bin.gz ] 
+if [ -r english-chunker-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd english-chunker-par-linux-3.2-utf8.bin.gz > lib/english-chunker-utf8.par
     echo 'English chunker parameter file (UTF8) installed.'
 fi
 
-if [ -r spanish-chunker-par-linux-3.2-utf8.bin.gz ] 
+if [ -r spanish-chunker-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd spanish-chunker-par-linux-3.2-utf8.bin.gz > lib/spanish-chunker-utf8.par
     echo 'Spanish chunker parameter file (UTF8) installed.'
@@ -97,7 +97,7 @@ then
     echo 'French parameter file (UTF8) installed.'
 fi
 
-if [ -r french-chunker-par-linux-3.2-utf8.bin.gz ] 
+if [ -r french-chunker-par-linux-3.2-utf8.bin.gz ]
 then
     gzip -cd french-chunker-par-linux-3.2-utf8.bin.gz > lib/french-chunker-utf8.par
     echo 'French chunker parameter file (UTF8) installed.'
@@ -274,26 +274,26 @@ then
     echo 'TreeTagger version for ARM-Linux installed.'
 fi
 
-if [ -r tagger-scripts.tar ] 
+if [ -r tagger-scripts.tar ]
 then
     tar -xf tagger-scripts.tar
     chmod +x cmd/*
     echo 'Tagging scripts installed.'
 fi
 
-if [ -r estonian-par-linux-3.2-utf8.bin ] 
+if [ -r estonian-par-linux-3.2-utf8.bin ]
 then
     mv estonian-par-linux-3.2-utf8.bin lib/estonian-utf8.par
     echo 'Estonian parameter file (UTF8) installed.'
 fi
 
-if [ -r finnish-par-linux-3.2-utf8.bin ] 
+if [ -r finnish-par-linux-3.2-utf8.bin ]
 then
     mv finnish-par-linux-3.2-utf8.bin lib/finnish-utf8.par
     echo 'Finnish parameter file (UTF8) installed.'
 fi
 
-if [ -r greek-par-linux-3.2-utf8.bin ] 
+if [ -r greek-par-linux-3.2-utf8.bin ]
 then
     mv greek-par-linux-3.2-utf8.bin lib/greek-utf8.par
     echo 'Greek parameter file (UTF8) installed.'
@@ -317,7 +317,7 @@ then
     echo 'Middle High German parameter file (UTF8) installed.'
 fi
 
-if [ -r german-chunker-par-linux-3.2-utf8.bin ] 
+if [ -r german-chunker-par-linux-3.2-utf8.bin ]
 then
     mv german-chunker-par-linux-3.2-utf8.bin lib/german-chunker-utf8.par
     echo 'German chunker parameter file (UTF8) installed.'
@@ -329,13 +329,13 @@ then
     echo 'English parameter file (UTF8) installed.'
 fi
 
-if [ -r english-chunker-par-linux-3.2-utf8.bin ] 
+if [ -r english-chunker-par-linux-3.2-utf8.bin ]
 then
     mv english-chunker-par-linux-3.2-utf8.bin lib/english-chunker-utf8.par
     echo 'English chunker parameter file (UTF8) installed.'
 fi
 
-if [ -r spanish-chunker-par-linux-3.2-utf8.bin ] 
+if [ -r spanish-chunker-par-linux-3.2-utf8.bin ]
 then
     mv spanish-chunker-par-linux-3.2-utf8.bin lib/spanish-chunker-utf8.par
     echo 'Spanish chunker parameter file (UTF8) installed.'
@@ -347,7 +347,7 @@ then
     echo 'French parameter file (UTF8) installed.'
 fi
 
-if [ -r french-chunker-par-linux-3.2-utf8.bin ] 
+if [ -r french-chunker-par-linux-3.2-utf8.bin ]
 then
     mv french-chunker-par-linux-3.2-utf8.bin lib/french-chunker-utf8.par
     echo 'French chunker parameter file (UTF8) installed.'
