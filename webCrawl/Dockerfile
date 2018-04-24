@@ -23,10 +23,10 @@ RUN pip install -r /srv/packages/requirements.txt
 
 COPY config/jupyter_notebook_config.py /home/jovyan/.jupyter
 
-COPY data /home/jovyan/data
+COPY data /home/jovyan/work
 
 RUN chown -R jovyan /home/jovyan
 
 USER jovyan
 
-RUN jupyter trust /home/jovyan/data/index.ipynb
+RUN jupyter trust /home/jovyan/work/index.ipynb
