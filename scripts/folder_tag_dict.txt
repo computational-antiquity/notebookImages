@@ -1,0 +1,4 @@
+webCrawl eoa/dh_basics_using_web_sources
+greekInscriptions eoa/edition_topoi_inscriptiones_christianae_graecae
+fullExample eoa/publication_example
+jupyterlab eoa/dh_basics_jupyterlab
