@@ -27,6 +27,10 @@ RUN pip install -r /srv/packages/requirements.txt
 
 RUN conda env update --file /srv/packages/conda.yml
 
+# Special case for Geoviews: Using Graph features from master branch
+
+RUN pip install -U git+https://github.com/ioam/geoviews.git
+
 COPY config/jupyter_notebook_config.py /home/jovyan/.jupyter
 
 COPY data /home/jovyan/work
