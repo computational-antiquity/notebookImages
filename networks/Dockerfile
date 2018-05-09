@@ -23,9 +23,9 @@ COPY packages /srv/packages
 
 RUN pip install -r /srv/packages/requirements.txt
 
-# Install non- pypa packages (take care of dependencies in req or pack files)
+# Install non- pypa packages (take care of dependencies in requirements.txt or packages.txt files)
 
-Run conda install -c conda-forge -c ioam holoviews geoviews
+RUN conda env update --file /srv/packages/conda.yml
 
 COPY config/jupyter_notebook_config.py /home/jovyan/.jupyter
 
