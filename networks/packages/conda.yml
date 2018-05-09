@@ -1,0 +1,7 @@
+name: networks
+channels:
+- conda-forge
+- ioam
+dependencies:
+- holoviews
+- geoviews
