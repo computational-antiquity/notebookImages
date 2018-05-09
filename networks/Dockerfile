@@ -23,7 +23,7 @@ COPY packages /srv/packages
 
 RUN pip install -r /srv/packages/requirements.txt
 
-# Install non- pypa packages (take care of dependencies in requirements.txt or packages.txt files)
+# Install non-pypa packages (take care of dependencies in requirements.txt or packages.txt files !)
 
 RUN conda env update --file /srv/packages/conda.yml
 

@@ -1,4 +1,4 @@
-name: networks
+name: root
 channels:
 - conda-forge
 - ioam
