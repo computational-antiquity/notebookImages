@@ -34,9 +34,12 @@ RUN mkdir /home/jovyan/.jupyter/custom
 
 COPY config/custom /home/jovyan/.jupyter/custom
 
+RUN chown -R jovyan:users /home/jovyan/.jupyter
+
+# Setup startup file
 COPY config/startup /home/jovyan/.ipython/profile_default/startup
 
-RUN chown -R jovyan:users /home/jovyan/.jupyter
+RUN chown -R jovyan:users /home/jovyan/.ipython
 
 USER jovyan
 
