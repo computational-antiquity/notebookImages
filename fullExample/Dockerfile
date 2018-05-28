@@ -2,6 +2,8 @@ FROM jupyter/base-notebook
 
 MAINTAINER Malte Vogl <mvogl@mpiwg-berlin.mpg.de>
 
+RUN python3 -m pip install --no-cache jupyterhub==0.8.1
+
 # Enable table of contents and widgets
 RUN pip install jupyter_contrib_nbextensions ipywidgets
 
