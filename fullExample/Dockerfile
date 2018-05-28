@@ -27,6 +27,8 @@ RUN mkdir /home/jovyan/.jupyter/custom
 
 COPY config/custom /home/jovyan/.jupyter/custom
 
+COPY config/startup /home/jovyan/.ipython/profile_default/startup
+
 RUN chown -R jovyan:users /home/jovyan/.jupyter
 
 USER jovyan

@@ -1,3 +1,4 @@
 c = get_config()
 
-c.NotebookApp.file_to_run = '/home/jovyan/data/index.ipynb'
+# Additional config for the single user notebook server. For example:
+# c.NotebookApp.file_to_run = '/home/jovyan/data/index.ipynb'
