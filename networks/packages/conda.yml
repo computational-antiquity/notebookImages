@@ -1,0 +1,7 @@
+name: root
+channels:
+- conda-forge
+- ioam
+dependencies:
+- holoviews
+- geoviews
